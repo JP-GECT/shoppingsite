@@ -1,7 +1,12 @@
 
 import React from "react";
 import {Card, CardBody,Stack,Heading,Image,Text,Divider,ButtonGroup,Button,CardFooter} from '@chakra-ui/react'
+import {useState} from 'react'
+
+
+
 const Cards =(props)=>{
+    const[count, setCount] = useState(0);
     return(
         <>
         <Card maxW='sm'>
@@ -13,11 +18,11 @@ const Cards =(props)=>{
     />
     <Stack mt='6' spacing='3'>
       <Heading size='md'>{props.Name}</Heading>
-      <Text>
+     {/*} <Text>
         This sofa is perfect for modern tropical spaces, baroque inspired
         spaces, earthy toned spaces and for people who love a chic design with a
         sprinkle of vintage design.
-      </Text>
+    </Text>*/}
       <Text color='blue.600' fontSize='2xl'>
         $450
       </Text>
@@ -26,11 +31,12 @@ const Cards =(props)=>{
   <Divider />
   <CardFooter>
     <ButtonGroup spacing='2'>
-      <Button variant='solid' colorScheme='blue'>
-        Buy now
+      <Button variant='solid' colorScheme='blue' onClick={()=>setCount(count-1)}>
+        -
       </Button>
-      <Button variant='ghost' colorScheme='blue'>
-        Add to cart
+      <Text>{count}</Text>
+      <Button variant='solid' colorScheme='blue' onClick={()=>setCount(count+1)}>
+        +
       </Button>
     </ButtonGroup>
   </CardFooter>
