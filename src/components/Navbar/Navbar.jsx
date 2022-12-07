@@ -11,7 +11,7 @@ export const Navbar = ()=>{
     <Input focusBorderColor='pink' placeholder='wanna buy something' color="black" borderColor="white"   _placeholder={{ opacity: 0.5, color: 'gray.500' }}/>
     <InputRightElement borderColor="black" children={<SearchIcon color='white' />} />
   </InputGroup>
-           <Heading></Heading>
+           <Heading>🛒</Heading>
        </Flex>
     )
 }
